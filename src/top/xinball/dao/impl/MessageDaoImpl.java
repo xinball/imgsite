@@ -30,13 +30,13 @@ public class MessageDaoImpl extends BaseDao implements MessageDao {
 
     @Override
     public List<Message> queryAll() {
-        String sql = "select * from message order by sendTime asc";
+        String sql = "select * from message order by sendTime desc";
         return queryForList(Message.class, sql);
     }
 
     @Override
     public List<Message> queryAllKey(String key) {
-        String sql = "select * from message where content like ? order by sendTime asc";
+        String sql = "select * from message where content like ? order by sendTime desc";
         return queryForList(Message.class, sql, "%"+key+"%");
     }
 

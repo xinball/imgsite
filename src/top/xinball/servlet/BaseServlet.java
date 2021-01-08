@@ -46,8 +46,8 @@ public abstract class BaseServlet extends HttpServlet {
         doPost(req, resp);
     }
     public String index(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException {
-        req.setAttribute("msg","发送数据有误！（消息方法不存在）");
-        req.setAttribute("returnvalue","格式0");
+        req.setAttribute("msg","发送数据格式有误！（消息方法不存在）");
+        req.setAttribute("returnvalue","0");
         return Constant.pagemessage;
         //System.out.println("无效地址");
         //return Constant.page404;
